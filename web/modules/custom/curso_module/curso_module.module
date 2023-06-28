@@ -1,0 +1,106 @@
+<?php
+
+/**
+ ** Implement hook_help()
+ */
+function curso_module_help(
+    $route_name, 
+    \Drupal\Core\Routing\RouteMatchInterface $route_match
+) {
+
+    switch ( $route_name ) {
+  
+        // Main module help for the block module.
+        case 'help.page.curso_module':
+            return '<p> ¡Hola Mundo! Desde el Hook curso_module() </p>';  
+    }
+}
+
+/**
+ ** Implement hook_ENTITY_TYPE_insert()
+ *** @param \Drupal\node\NodeInterface
+ */
+function curso_module_node_insert( \Drupal\node\NodeInterface $node ) {
+
+    # Imprimir mensaje
+    //dpm('Llamando al Hook curso_module_node_insert()');
+}
+
+/**
+ ** Implement hook_ENTITY_TYPE_update()
+ *** @param \Drupal\node\NodeInterface
+ */
+function curso_module_node_update(\Drupal\node\NodeInterface $node) {
+
+    # Imprimir mensaje
+    //dpm('Llamando al Hook curso_module_node_update()');
+}
+
+/**
+ ** Implement hook_theme()
+ *** @param \Drupal\node\NodeInterface
+ ** Hook para crear un template HTML(Twig)
+ */ 
+function curso_module_theme( $existing, $type, $theme, $path ) {
+
+    return [
+        'curso_plantilla' => [
+            'variables' => [
+                'etiqueta'    => NULL,
+                'tipo'        => NULL,
+                'autor'       => NULL,
+                'descripcion' => NULL
+            ]
+        ]
+    ];
+}
+
+/**
+ ** Implement hook_form_alter()
+ ** Con este Hook se pueden alterar varios formularios
+ */
+function curso_module_form_alter(
+    &$form, 
+    \Drupal\Core\Form\FormStateInterface $form_state, 
+    $form_id
+) {
+
+    if ( 'curso_module_curso_form' == $form_id ) {
+
+        # Imprimir mensaje
+        /* dpm($form, 'form');
+        dpm('Llamando al Hook curso_module_form_alter()'); */
+
+        // Alterar el Formulario (Quitar el required del campo telefono)
+        $form['telefono']['#required'] = false;
+    }    
+}
+
+/**
+ ** Implement hook_form_FORM_ID_alter() 
+ ** Con este hook se puede alterarl un unico formulario
+ */
+function curso_module_form_curso_module_curso_form_alter(
+    &$form, 
+    \Drupal\Core\Form\FormStateInterface $form_state,
+    $form_id
+) {
+    # Imprimir mensaje    
+    //dpm('Llamando al Hook hook_form_FORM_ID_alter()');
+
+    // Alterar el Formulario (Quitar el required del campo telefono)
+    $form['telefono']['#required'] = false;
+}
+
+/**
+ ** Implement hook_form_FORM_ID_alter()
+ ** Alterando el Formularo de drupal (Articulo)
+ */
+function curso_module_form_node_article_form_alter(
+    &$form, 
+    \Drupal\Core\Form\FormStateInterface $form_state,
+    $form_id
+) {
+    # Imprimir mensaje    
+    //dpm('Llamando al Hook hook_form_FORM_ID_alter() Node');
+}

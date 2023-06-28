@@ -1,0 +1,14 @@
+curso_config.configuracion_custom:
+  path: '/configuracion-custom'
+  defaults:
+    _controller: '\Drupal\curso_config\Controller\ConfigController::index'
+  requirements:
+    _permission: 'access_content'
+
+curso_config.config_editar:
+  path: '/configuracion-custom/editar'
+  defaults:
+    _form: '\Drupal\curso_config\Form\CursoConfigForm'
+  requirements:
+    _permission: 'access_content'
+  

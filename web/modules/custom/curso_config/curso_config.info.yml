@@ -1,0 +1,6 @@
+name: 'Curso config'
+type: module
+core_version_requirement: ^9
+description: 'Modulo para la configuración del sistema personalizada'
+version: 1.0.0
+package: 'Curso'

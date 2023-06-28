@@ -1,0 +1,4 @@
+curso permiso limitado:
+  title: 'Acceso limitado al curso drupal'
+  # Agregar mensaje de advertencia el apartado de permisos
+  restrict access: true

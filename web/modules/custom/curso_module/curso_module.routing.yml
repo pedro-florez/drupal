@@ -1,0 +1,81 @@
+# Ruta para los Controladores
+curso_module.productos: # Nombre de la Ruta
+  path: '/productos'
+  defaults:
+    _controller: '\Drupal\curso_module\Controller\CursoController::index'
+  requirements:
+    _permission: 'access_content'
+
+curso_module.productos_show:
+  path: '/producto/show/{node}'  # Ruta con parametros
+  defaults:
+    _controller: '\Drupal\curso_module\Controller\CursoController::show'
+  requirements:
+    _permission: 'access_content'
+
+curso_module.productos_editar:
+  path: '/producto/editar/{token}'
+  defaults:
+    _controller: '\Drupal\curso_module\Controller\CursoController::editar'
+  requirements:
+    _permission: 'access_content'
+
+curso_module.configuracion_editar:
+  path: '/configuracion/editar'
+  defaults:
+    _controller: '\Drupal\curso_module\Controller\CursoController::configCustom'
+  requirements:
+    _permission: 'access_content'
+
+# Ruta para Cargar formulario desde el controlador
+curso_module.productos_form:
+  path: '/producto/form'
+  defaults:
+    _controller: '\Drupal\curso_module\Controller\CursoController::crear'
+  requirements:
+    _permission: 'access_content'
+
+# Rutas para los Formularios
+curso_module.curso_form:
+  path: '/producto/crear'
+  defaults:
+    _form: '\Drupal\curso_module\Form\CursoForm'
+  requirements:
+    _permission: 'access_content'
+
+# Ruta para las Entidades
+curso_module.entity_index:
+  path: '/entity'
+  defaults:
+    _controller: '\Drupal\curso_module\Controller\EntityController::index'
+  requirements:
+    _permission: 'access_content'
+
+curso_module.entity_query:
+  path: '/entity/query'
+  defaults:
+    _controller: '\Drupal\curso_module\Controller\EntityController::query'
+  requirements:
+    _permission: 'access_content'
+
+curso_module.entity_crear:
+  path: '/entity/crear'
+  defaults:
+    _controller: '\Drupal\curso_module\Controller\EntityController::crear'
+  requirements:
+    _permission: 'access_content'
+
+curso_module.entity_editar:
+  path: '/entity/editar'
+  defaults:
+    _controller: '\Drupal\curso_module\Controller\EntityController::editar'
+  requirements:
+    _permission: 'access_content'
+
+curso_module.entity_eliminar:
+  path: '/entity/eliminar'
+  defaults:
+    _controller: '\Drupal\curso_module\Controller\EntityController::eliminar'
+  requirements:
+    _permission: 'access_content'
+

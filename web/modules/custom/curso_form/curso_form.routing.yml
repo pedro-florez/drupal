@@ -1,0 +1,6 @@
+curso_form.curso_form:
+  path: '/curso/formulario'
+  defaults:
+    _form: '\Drupal\curso_form\Form\CursoForm'
+  requirements:
+    _permission: 'access content'

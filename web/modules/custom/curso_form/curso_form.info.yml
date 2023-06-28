@@ -1,0 +1,7 @@
+name: 'Curso form'
+type: module
+core_version_requirement: ^9
+
+description: 'Modulo para el curso form.'
+version: 1.0.0
+package: 'Curso'

@@ -1,0 +1,8 @@
+services:
+  curso_module.repetir_palabras:
+    # Agregar Servicio Custom
+    class: '\Drupal\curso_module\Services\RepetirPalabraService'
+    # Agregar Servicio de Drupal
+    arguments: ['@messenger', '@entity_type.manager']     
+    # \Drupal\Core\Messenger\Messenger
+    # \Drupal\Core\Entity\EntityTypeManager

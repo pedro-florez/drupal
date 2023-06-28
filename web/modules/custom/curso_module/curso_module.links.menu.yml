@@ -1,0 +1,16 @@
+# Crear Menu Principal
+curso_module.productos_form:
+  title: 'Formulario'
+  description: 'Formulario de Productos'
+  route_name: curso_module.productos_form
+  #parent: system.admin
+  weight: 100
+  menu_name: 'main'
+
+curso_module.configuracion_editar:
+  title: 'Configuracion Custom'
+  description: 'Configuracion Custom'
+  route_name: curso_module.configuracion_editar
+  #parent: system.admin
+  weight: 10
+  menu_name: 'main'
