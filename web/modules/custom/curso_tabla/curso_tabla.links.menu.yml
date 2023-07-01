@@ -1,0 +1,5 @@
+curso_tabla.index:
+  title: 'Tabla'
+  description: 'Listado de productos'
+  route_name: curso_tabla.index
+  menu_name: 'main'

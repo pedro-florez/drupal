@@ -1,5 +1,5 @@
 # Ruta para los Controladores
-curso_module.productos: # Nombre de la Ruta
+curso_module.index: # Nombre de la Ruta
   path: '/productos'
   defaults:
     _controller: '\Drupal\curso_module\Controller\CursoController::index'

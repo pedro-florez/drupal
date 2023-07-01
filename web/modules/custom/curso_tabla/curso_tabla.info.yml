@@ -1,0 +1,8 @@
+name: 'Curso tabla'
+type: module
+core_version_requirement: ^9
+description: 'Crear modulo tabla'
+version: 1.0.0
+package: 'Curso'
+dependencies:
+  - drupal:node

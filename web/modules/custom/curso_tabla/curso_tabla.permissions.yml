@@ -1,0 +1,3 @@
+acceso tabla:
+  title: 'Permite acceder a la tabla'  
+  restrict access: true

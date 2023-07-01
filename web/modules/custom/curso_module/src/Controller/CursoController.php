@@ -47,36 +47,46 @@ class CursoController extends ControllerBase {
         );
     }
 
+    /**
+     ** Cargando Theme Custom (curso_plantilla)
+     */
     public function index() {
 
         /* return new Response('<h1>Respuesta desde el controlador CursoController</h1>'); */
 
-        // Devolver Render Arrar (una vista con las propiedades  #markup | #plain_text )
+        /**
+         ** Devolver Render Array
+         ** Una vista con las propiedades  #markup | #plain_text
+         */         
         /* return [            
             '#markup' => 'El #markup del controlador'
-            //'#plain_text' => 'El #plain_text del controlador'
+            '#plain_text' => 'El #plain_text del controlador'
         ]; */
 
         /**
          ** Inyectar Servicios en Controlador no es recomendable
-         * Solo se puede Inyectar en los Hooks
-         * $repetir = \Drupal::service('curso_module.repetir_palabras'); 
+         ** Solo se puede Inyectar en los Hooks
+         ** $repetir = \Drupal::service('curso_module.repetir_palabras'); 
         */
+        
+        $resultado = $this->repetir->repetir( 'hacker ', 2 );
 
-        $resultado = $this->repetir->repetir( 'curso ', 5 );
-
-        // Devolver Template
+        /**
+         ** Devolver Template Custom
+         ** Nombre del Theme: curso_plantilla
+         ** Ruta: curso_module\templates\curso-plantilla.html.twig
+         */
         return [         
-            '#theme'       => 'curso_plantilla', // Nombre Template
-            '#etiqueta'    => 'Productos Elegantes',
+            '#theme'       => 'curso_plantilla',
+            '#etiqueta'    => 'Plantilla Custom',
             '#tipo'        => $resultado,
             '#autor'       => 'Pedro Florez',
-            '#descripcion' => 'Este es el template de productos.'
+            '#descripcion' => 'Esta plantilla es personalizada desde Twig'
         ];
     }
 
     /**
-     ** Crear Formulario
+     ** Cargando Formulario Externo
      */
     public function crear() {
 
@@ -183,5 +193,4 @@ class CursoController extends ControllerBase {
             '#markup' => 'Configuracion del Sistema'
         ];        
     }
-
 }

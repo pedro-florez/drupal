@@ -1,0 +1,19 @@
+# Nombre del Paquete
+general: 
+  css:
+    theme:
+      assets/css/styles.css: {}
+  js:
+    assets/js/main.js: {}
+  #dependencies:
+    # Cargar librerias del Core
+    #- core/jquery
+
+# Otro Paquete
+articulo: 
+  css:
+    theme:
+      # Cargar Archivos Externos
+      #https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cerulean/bootstrap.min.css
+      //cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cerulean/bootstrap.min.css: { type: external }
+    

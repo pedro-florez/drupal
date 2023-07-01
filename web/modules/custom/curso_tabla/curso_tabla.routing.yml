@@ -1,0 +1,6 @@
+curso_tabla.index:
+  path: '/tabla'
+  defaults:
+    _controller: '\Drupal\curso_tabla\Controller\TablaController::index'
+  requirements:
+    _permission: 'acceso tabla'
